@@ -5,6 +5,7 @@ import { setPlayer } from "../store/actions/playerActions";
 import { setQuestion } from "../store/actions/questionActions";
 import { setUser } from "../store/actions/userActions";
 import { initialQuestionState } from "../store/reducers/questionReducer";
+import { imgBaseUrl } from "../baseUrl";
 import LeaderBoard from "./LeaderBoard";
 import axios from "../store/axiosWraper";
 import "../styles/Profile.css";
@@ -51,7 +52,7 @@ function Profile() {
           <span className="detail">Total Score: {user.totalScore}</span>
           {lastGameStats()}
         </div>
-        <img className="profile-avatar" src={user.avatarUrl} alt="Avatar" />
+        <img className="profile-avatar" src={imgBaseUrl + user.avatarUrl} alt="Avatar" />
         <h1 id="profile-page-title">{user.name}</h1>
       </div>
       <button id="ButtonStart" onClick={startButtonHandler}>

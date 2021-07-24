@@ -24,6 +24,7 @@ module.exports = {
     username: DB_USERNAME,
     password: PASS,
     database: DB_PROD,
+    host: HOST || 'localhost',
     dialect: "mysql",
     dialectOptions: {
       socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,

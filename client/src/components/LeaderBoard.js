@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
 import axios from "../store/axiosWraper";
 import "../styles/LeaderBoard.css";
+import { imgBaseUrl } from "../baseUrl";
 
 function LeaderBoard() {
   const [leaderBoard, setLeaderBoard] = useState("");
@@ -30,7 +31,7 @@ function LeaderBoard() {
                 <td>
                   <img
                     className="lb-player-avatar"
-                    src={player.avatarUrl}
+                    src={imgBaseUrl + player.avatarUrl}
                     alt="avatar"
                   />
                 </td>

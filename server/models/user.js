@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.Player, { foreignKey: "userId" });
-      this.hasOne(models.Avatar, { foreignKey: "id" });
+      this.hasOne(models.Avatar, { foreignKey: "avatarId" });
     }
   }
   User.init(

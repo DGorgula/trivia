@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { setPlayer } from "../store/actions/playerActions";
+import { imgBaseUrl } from "../baseUrl";
 
 import LivesLast from "./LivesLast";
 import "../styles/PlayerStatsBar.css";
@@ -15,7 +16,7 @@ function PlayerStatsBar(props) {
   return (
     <div id="playerStatsBar">
       <div id="game-stats">
-        <img className="avatar" src={avatarUrl} alt="AVATAR" />
+        <img className="avatar" src={imgBaseUrl + avatarUrl} alt="AVATAR" />
         {name}
       </div>
 

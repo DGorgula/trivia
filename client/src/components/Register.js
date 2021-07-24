@@ -5,6 +5,7 @@ import { setUser } from "../store/actions/userActions";
 import MiniLoader from "./MiniLoader";
 import axios from "../store/axiosWraper";
 import "../styles/Register.css";
+import { baseUrl } from "../baseUrl";
 
 function Register() {
   const [login, setLogin] = useState(false);
@@ -76,7 +77,7 @@ function Register() {
     const images = [];
     const imageCount = await axios.get("/avatar/count");
     for (let i = 1; i < imageCount; i++) {
-      images.push(`/api/avatar/avatar${i}`);
+      images.push(`${baseUrl}/avatar/avatar${i}`);
     }
     setImages(images);
   }

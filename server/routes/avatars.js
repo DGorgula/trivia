@@ -9,6 +9,7 @@ avatar.get("/count", (req, res) => {
 
 avatar.get("/:picName", async (req, res) => {
     const { picName } = req.params
+    console.log("in the picname!!", picName);
     return res.sendFile(`${process.cwd()}/avatars/${picName}.jpeg`);
 });
 
